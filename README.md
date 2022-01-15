@@ -1,11 +1,3 @@
-**This repository has been superseded by [vimspectr](https://github.com/nightsense/vimspectr).**
-
-.
-
-.
-
-.
-
 <h1 id="strawberry">strawberry</h1>
 
 <p>A pink vim theme.</p>
@@ -49,10 +41,7 @@ call plug#end()
 
 <p>To activate the strawberry theme, add one of the following lines to your <code class="highlighter-rouge">vimrc</code>:</p>
 
-<ul>
-  <li><code class="highlighter-rouge">colorscheme strawberry-light</code></li>
-  <li><code class="highlighter-rouge">colorscheme strawberry-dark</code></li>
-</ul>
+<code class="highlighter-rouge">colorscheme strawberry</code>
 
 <blockquote>
   <p>To assign themes to specific intervals of the day, try the <a href="https://github.com/nightsense/night-and-day">night-and-day</a> plugin.</p>
@@ -64,14 +53,14 @@ call plug#end()
 
 <p>Disable highlighted <strong>current line number</strong>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:strawberry_dark_CursorLineNr = 'off'
-let g:strawberry_light_CursorLineNr = 'off'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:strawberryCursorLineNr = 'off'
+let g:strawberryCursorLineNr = 'off'
 </code></pre></div></div>
 
 <p>Disable the highlighted <strong>line number background</strong>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:strawberry_dark_LineNr = 'off'
-let g:strawberry_light_LineNr = 'off'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:strawberryLineNr = 'off'
+let g:strawberryLineNr = 'off'
 </code></pre></div></div>
 
 <h2 id="terminal-vim">terminal vim</h2>

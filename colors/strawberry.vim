@@ -1,29 +1,63 @@
-" strawberry-light, a vim colourscheme by nightsense
+" strawberry-dark, a vim colourscheme by nightsense
 "
 " generated with a theme template adapted from
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
 
-
 "=== SET COLOUR VARIABLES =====================================================
 
 " GUI colours
-let s:g0 = 'fff0f7'
-let s:g1 = 'f0dde6'
-let s:g2 = 'b5a3ac'
-let s:g3 = '9e8b95'
-let s:g4 = '8a7680'
-let s:g5 = '75616b'
-let s:g6 = '3b2c33'
-let s:g7 = '2b1d24'
-let s:g8 = 'f55050'
-let s:g9 = 'e06a26'
-let s:gA = 'd4ac35'
-let s:gB = '219e21'
-let s:gC = '1b9e9e'
-let s:gD = '468dd4'
-let s:gE = 'a26fbf'
-let s:gF = 'd46a84'
+if &background ==# 'dark'
+  let s:g0 = '2b1d24'
+  let s:g1 = '3b2c33'
+  let s:g2 = '75616b'
+  let s:g3 = '8a7680'
+  let s:g4 = '9e8b95'
+  let s:g5 = 'b5a3ac'
+  let s:g6 = 'f0dde6'
+  let s:g7 = 'fff0f7'
+  let s:g8 = 'bf5858'
+  let s:g9 = 'b56f45'
+  let s:gA = 'ab8e38'
+  let s:gB = '508a50'
+  let s:gC = '458a8a'
+  let s:gD = '557b9e'
+  let s:gE = '8b6a9e'
+  let s:gF = 'ab6a7a'
+else
+  let s:g0 = 'fff0f7'
+  let s:g1 = 'f0dde6'
+  let s:g2 = 'b5a3ac'
+  let s:g3 = '9e8b95'
+  let s:g4 = '8a7680'
+  let s:g5 = '75616b'
+  let s:g6 = '3b2c33'
+  let s:g7 = '2b1d24'
+  let s:g8 = 'f55050'
+  let s:g9 = 'e06a26'
+  let s:gA = 'd4ac35'
+  let s:gB = '219e21'
+  let s:gC = '1b9e9e'
+  let s:gD = '468dd4'
+  let s:gE = 'a26fbf'
+  let s:gF = 'd46a84'
+endif
+let g:terminal_color_0  = '#' . s:g0
+let g:terminal_color_1  = '#' . s:g8
+let g:terminal_color_2  = '#' . s:gB
+let g:terminal_color_3  = '#' . s:gA
+let g:terminal_color_4  = '#' . s:gD
+let g:terminal_color_5  = '#' . s:gE
+let g:terminal_color_6  = '#' . s:gC
+let g:terminal_color_7  = '#' . s:g5
+let g:terminal_color_8  = '#' . s:g3
+let g:terminal_color_9  = '#' . s:g9
+let g:terminal_color_10 = '#' . s:g1
+let g:terminal_color_11 = '#' . s:g2
+let g:terminal_color_12 = '#' . s:g4
+let g:terminal_color_13 = '#' . s:g6
+let g:terminal_color_14 = '#' . s:gF
+let g:terminal_color_15 = '#' . s:g7
 
 " terminal colours
 let s:t0 = '00'
@@ -43,48 +77,11 @@ let s:t6 = '13'
 let s:t9 = '09'
 let s:tF = '14'
 
-" neovim colours
-if has('nvim')
-  let g:terminal_color_0 =  '#fff0f7'
-  let g:terminal_color_1 =  '#f55050'
-  let g:terminal_color_2 =  '#219e21'
-  let g:terminal_color_3 =  '#d4ac35'
-  let g:terminal_color_4 =  '#468dd4'
-  let g:terminal_color_5 =  '#a26fbf'
-  let g:terminal_color_6 =  '#1b9e9e'
-  let g:terminal_color_7 =  '#75616b'
-  let g:terminal_color_8 =  '#9e8b95'
-  let g:terminal_color_9 =  '#e06a26'
-  let g:terminal_color_10 = '#f0dde6'
-  let g:terminal_color_11 = '#b5a3ac'
-  let g:terminal_color_12 = '#8a7680'
-  let g:terminal_color_13 = '#3b2c33'
-  let g:terminal_color_14 = '#d46a84'
-  let g:terminal_color_15 = '#2b1d24'
-endif
-
-
 "=== OTHER PREPARATION ========================================================
 
-" run theme-setting script if using terminal vim
-if filereadable(expand('~/.nightshell/strawberry-light'))
-  if !has('gui_running')
-    execute 'silent !/bin/sh $HOME/.nightshell/strawberry-light'
-  endif
-endif
-
-" clear old theme
 hi clear
 syntax reset
-
-" set new theme
-set background=light
-augroup NightsenseThemeSet
-   autocmd!
-   autocmd CursorMoved * execute 'if !exists("colors_name") |
-         \ colorscheme strawberry-light | endif'
-augroup END
-let colors_name = 'strawberry-light'
+let colors_name = 'strawberry'
 
 " highlighting function
 fun! <sid>h(x, gf, gb, cf, cb, a, s)
@@ -178,9 +175,15 @@ cal <sid>h('SpellCap'         , ''   , ''   , s:t0 , s:t9 , 'undercurl' , s:g9)
 cal <sid>h('Title'            , s:g9 , ''   , s:t9 , ''   , 'none'      , ''  )
 
 " YELLOW for highlighted elements
-cal <sid>h('DiffText'         , s:gA , s:g6 , s:tA , s:t6 , 'reverse'   , ''  )
-cal <sid>h('Search'           , s:gA , s:g6 , s:tA , s:t6 , 'reverse'   , ''  )
-cal <sid>h('Todo'             , s:gA , s:g6 , s:tA , s:t6 , 'reverse'   , ''  )
+if &background ==# 'dark'
+  cal <sid>h('DiffText'       , s:gA , s:g0 , s:tA , s:t0 , 'reverse'   , ''  )
+  cal <sid>h('Search'         , s:gA , s:g0 , s:tA , s:t0 , 'reverse'   , ''  )
+  cal <sid>h('Todo'           , s:gA , s:g0 , s:tA , s:t0 , 'reverse'   , ''  )
+else
+  cal <sid>h('DiffText'       , s:gA , s:g6 , s:tA , s:t6 , 'reverse'   , ''  )
+  cal <sid>h('Search'         , s:gA , s:g6 , s:tA , s:t6 , 'reverse'   , ''  )
+  cal <sid>h('Todo'           , s:gA , s:g6 , s:tA , s:t6 , 'reverse'   , ''  )
+endif
 
 " GREEN for action elements
 cal <sid>h('Conditional'      , s:gB , ''   , s:tB , ''   , 'none'      , ''  )
@@ -228,15 +231,15 @@ cal <sid>h('Identifier'       , s:gF , ''   , s:tF , ''   , 'none'      , ''  )
 "=== OPTIONS ==================================================================
 
 " disable highlighted CursorLineNr
-if exists('g:strawberry_light_CursorLineNr')
-if g:strawberry_light_CursorLineNr == 'off'
+if exists('g:strawberryCursorLineNr')
+if g:strawberryCursorLineNr == 'off'
 cal <sid>h('CursorLineNr'     , s:g4 , s:g1 , s:t4 , s:t1 , 'none'      , ''  )
 endif
 endif
 
 " disable LineNr background altogether
-if exists('g:strawberry_light_LineNr')
-if g:strawberry_light_LineNr == 'off'
+if exists('g:strawberryLineNr')
+if g:strawberryLineNr == 'off'
 cal <sid>h('CursorLineNr'     , s:g4 , s:g0 , s:t4 , s:t0 , 'none'      , ''  )
 cal <sid>h('LineNr'           , s:g4 , s:g0 , s:t4 , s:t0 , 'none'      , ''  )
 endif
