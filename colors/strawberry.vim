@@ -78,8 +78,10 @@ endfun
 
 " cursor + status line + selected tab
 cal <sid>h('Cursor'           , s:g0 , s:gF , 'none'      , ''  )
-cal <sid>h('StatusLine'       , s:g0 , s:gF , 'none'      , ''  )
-cal <sid>h('StatusLineTerm'   , s:g0 , s:gF , 'none'      , ''  )
+cal <sid>h('StatusLine'       , s:gF , s:g1 , 'none'      , ''  )
+cal <sid>h('StatusLineNC'     , s:g5 , s:g1 , 'none'      , ''  )
+cal <sid>h('StatusLineTerm'   , s:gF , s:g1 , 'none'      , ''  )
+cal <sid>h('StatusLineTermNC' , s:g5 , s:g1 , 'none'      , ''  )
 cal <sid>h('TabLineSel'       , s:g0 , s:gF , 'none'      , ''  )
 cal <sid>h('TermCursor'       , s:g0 , s:gF , 'none'      , ''  )
 
@@ -106,8 +108,6 @@ cal <sid>h('ColorColumn'      , ''   , s:g1 , 'none'      , ''  )
 cal <sid>h('CursorColumn'     , ''   , s:g1 , 'none'      , ''  )
 cal <sid>h('CursorLine'       , ''   , s:g1 , 'none'      , ''  )
 cal <sid>h('QuickFixLine'     , ''   , s:g1 , 'none'      , ''  )
-cal <sid>h('StatusLineNC'     , s:g5 , s:g1 , 'none'      , ''  )
-cal <sid>h('StatusLineTermNC' , s:g5 , s:g1 , 'none'      , ''  )
 cal <sid>h('TabLineFill'      , ''   , s:g1 , 'none'      , ''  )
 cal <sid>h('TermCursorNC'     , ''   , s:g1 , 'none'      , ''  )
 
