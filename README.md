@@ -47,22 +47,6 @@ call plug#end()
   <p>To assign themes to specific intervals of the day, try the <a href="https://github.com/nightsense/night-and-day">night-and-day</a> plugin.</p>
 </blockquote>
 
-<h3 id="options">options</h3>
-
-<p>You can tweak the following options by adding lines to your `vimrc’.</p>
-
-<p>Disable highlighted <strong>current line number</strong>:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:strawberryCursorLineNr = 'off'
-let g:strawberryCursorLineNr = 'off'
-</code></pre></div></div>
-
-<p>Disable the highlighted <strong>line number background</strong>:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:strawberryLineNr = 'off'
-let g:strawberryLineNr = 'off'
-</code></pre></div></div>
-
 <h2 id="terminal-vim">terminal vim</h2>
 
 <p>See the <a href="https://github.com/nightsense/nightshell">nightshell</a> repository, which allows strawberry to be used in a variety of terminal applications.</p>

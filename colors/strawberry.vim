@@ -206,21 +206,3 @@ cal <sid>h('Tag'              , s:gE , ''   , 'none'      , ''  )
 " PINK for object names
 cal <sid>h('Function'         , s:gF , ''   , 'none'      , ''  )
 cal <sid>h('Identifier'       , s:gF , ''   , 'none'      , ''  )
-
-
-"=== OPTIONS ====================================================
-
-" disable highlighted CursorLineNr
-if exists('g:strawberryCursorLineNr')
-if g:strawberryCursorLineNr == 'off'
-cal <sid>h('CursorLineNr'     , s:g4 , s:g1 , 'none'      , ''  )
-endif
-endif
-
-" disable LineNr background altogether
-if exists('g:strawberryLineNr')
-if g:strawberryLineNr == 'off'
-cal <sid>h('CursorLineNr'     , s:g4 , s:g0 , 'none'      , ''  )
-cal <sid>h('LineNr'           , s:g4 , s:g0 , 'none'      , ''  )
-endif
-endif
