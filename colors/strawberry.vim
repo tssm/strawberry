@@ -76,7 +76,7 @@ endfun
 
 "=== BASIC HIGHLIGHTING =========================================
 
-" cursor + status line + selected tab
+" cursor + status line + selected tab + vertical split
 cal <sid>h('Cursor'           , s:g0 , s:gF , 'none'      , ''  )
 cal <sid>h('StatusLine'       , s:gF , s:g1 , 'none'      , ''  )
 cal <sid>h('StatusLineNC'     , s:g5 , s:g1 , 'none'      , ''  )
@@ -84,6 +84,7 @@ cal <sid>h('StatusLineTerm'   , s:gF , s:g1 , 'none'      , ''  )
 cal <sid>h('StatusLineTermNC' , s:g5 , s:g1 , 'none'      , ''  )
 cal <sid>h('TabLineSel'       , s:g0 , s:gF , 'none'      , ''  )
 cal <sid>h('TermCursor'       , s:g0 , s:gF , 'none'      , ''  )
+cal <sid>h('VertSplit'        , s:g1 , s:g0 , 'none'      , ''  )
 
 " line numbers
 cal <sid>h('CursorLineNr'     , s:g0 , s:g3 , 'none'      , ''  )
@@ -131,7 +132,6 @@ cal <sid>h('WildMenu'         , s:g0 , s:g6 , 'none'      , ''  )
 " solid lines
 cal <sid>h('PmenuSbar'        , s:g1 , s:g1 , 'none'      , ''  )
 cal <sid>h('PmenuThumb'       , s:g4 , s:g4 , 'none'      , ''  )
-cal <sid>h('VertSplit'        , s:g2 , s:g2 , 'none'      , ''  )
 
 
 "=== ALERT/SYNTAX HIGHLIGHTING ==================================
