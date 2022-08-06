@@ -86,6 +86,13 @@ cal <sid>h('TabLineSel'       , s:g0 , s:gF , 'none'      , ''  )
 cal <sid>h('TermCursor'       , s:g0 , s:gF , 'none'      , ''  )
 cal <sid>h('VertSplit'        , s:g1 , s:g0 , 'none'      , ''  )
 
+" sign column and diff
+cal <sid>h('DiffAdd'          , s:gB , s:g0 , 'none'      , ''  )
+cal <sid>h('DiffChange'       , s:g4 , s:g0 , 'none'      , ''  )
+cal <sid>h('DiffDelete'       , s:g8 , s:g0 , 'none'      , ''  )
+cal <sid>h('DiffText'         , s:gA , s:g0 , 'none'      , ''  )
+cal <sid>h('SignColumn'       , s:g4 , s:g0 , 'none'      , ''  )
+
 " line numbers
 cal <sid>h('CursorLineNr'     , s:g0 , s:g3 , 'none'      , ''  )
 cal <sid>h('LineNr'           , s:g4 , s:g1 , 'none'      , ''  )
@@ -113,10 +120,8 @@ cal <sid>h('TabLineFill'      , ''   , s:g1 , 'none'      , ''  )
 cal <sid>h('TermCursorNC'     , ''   , s:g1 , 'none'      , ''  )
 
 " muted text on highlighted background
-cal <sid>h('DiffChange'       , s:g4 , s:g1 , 'none'      , ''  )
 cal <sid>h('FoldColumn'       , s:g4 , s:g1 , 'none'      , ''  )
 cal <sid>h('Folded'           , s:g4 , s:g1 , 'none'      , ''  )
-cal <sid>h('SignColumn'       , s:g4 , s:g1 , 'none'      , ''  )
 cal <sid>h('TabLine'          , s:g4 , s:g1 , 'none'      , ''  )
 cal <sid>h('VisualNOS'        , s:g4 , s:g1 , 'none'      , ''  )
 
@@ -137,7 +142,6 @@ cal <sid>h('PmenuThumb'       , s:g4 , s:g4 , 'none'      , ''  )
 "=== ALERT/SYNTAX HIGHLIGHTING ==================================
 
 " RED for warning elements
-cal <sid>h('DiffDelete'       , s:g8 , s:g0 , 'reverse'   , ''  )
 cal <sid>h('Error'            , s:g8 , s:g0 , 'reverse'   , ''  )
 cal <sid>h('ErrorMsg'         , s:g8 , s:g0 , 'none'      , ''  )
 cal <sid>h('SpellBad'         , ''   , ''   , 'undercurl' , s:g8)
@@ -156,18 +160,15 @@ cal <sid>h('Title'            , s:g9 , ''   , 'none'      , ''  )
 
 " YELLOW for highlighted elements
 if &background ==# 'dark'
-  cal <sid>h('DiffText'       , s:gA , s:g0 , 'reverse'   , ''  )
   cal <sid>h('Search'         , s:gA , s:g0 , 'reverse'   , ''  )
   cal <sid>h('Todo'           , s:gA , s:g0 , 'reverse'   , ''  )
 else
-  cal <sid>h('DiffText'       , s:gA , s:g6 , 'reverse'   , ''  )
   cal <sid>h('Search'         , s:gA , s:g6 , 'reverse'   , ''  )
   cal <sid>h('Todo'           , s:gA , s:g6 , 'reverse'   , ''  )
 endif
 
 " GREEN for action elements
 cal <sid>h('Conditional'      , s:gB , ''   , 'none'      , ''  )
-cal <sid>h('DiffAdd'          , s:gB , s:g0 , 'reverse'   , ''  )
 cal <sid>h('Exception'        , s:gB , ''   , 'none'      , ''  )
 cal <sid>h('Keyword'          , s:gB , ''   , 'none'      , ''  )
 cal <sid>h('Label'            , s:gB , ''   , 'none'      , ''  )
