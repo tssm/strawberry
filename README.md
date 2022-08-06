@@ -43,14 +43,6 @@ call plug#end()
 
 <code class="highlighter-rouge">colorscheme strawberry</code>
 
-<blockquote>
-  <p>To assign themes to specific intervals of the day, try the <a href="https://github.com/nightsense/night-and-day">night-and-day</a> plugin.</p>
-</blockquote>
-
-<h2 id="terminal-vim">terminal vim</h2>
-
-<p>See the <a href="https://github.com/nightsense/nightshell">nightshell</a> repository, which allows strawberry to be used in a variety of terminal applications.</p>
-
 <h2 id="palette">palette</h2>
 
 <p>strawberry consists of 8 theme-distinct <strong>base colours</strong>, which are used for most interface elements, and 8 standard <strong>accent colours</strong> (common to the “nightsense theme family”) used for syntax highlighting.</p>
