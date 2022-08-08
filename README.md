@@ -16,33 +16,6 @@
   <p>pictured font: <a href="http://input.fontbureau.com/">Input Mono Narrow</a> (1.2x line spacing)</p>
 </blockquote>
 
-<h2 id="setup">setup</h2>
-
-<h3 id="installation">installation</h3>
-
-<p>While vim themes can be installed manually (place <a href="https://github.com/nightsense/strawberry/tree/master/colors">theme file</a> in <code class="highlighter-rouge">~/.vim/colors/</code>), a <strong>plugin helper</strong> is recommended.</p>
-
-<p>If you don’t have a preferred helper, consider trying <a href="https://github.com/junegunn/vim-plug">vim-plug</a>, which can be installed with:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-</code></pre></div></div>
-
-<p>To install strawberry using vim-plug, add the following to the top of your <code class="highlighter-rouge">vimrc</code>:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>call plug#begin('~/.vim/plugged')
-Plug 'nightsense/strawberry'
-call plug#end()
-</code></pre></div></div>
-
-<p>Then restart vim and run <code class="highlighter-rouge">PlugUpdate</code> (from the vim command line).</p>
-
-<h3 id="activation">activation</h3>
-
-<p>To activate the strawberry theme, add one of the following lines to your <code class="highlighter-rouge">vimrc</code>:</p>
-
-<code class="highlighter-rouge">colorscheme strawberry</code>
-
 <h2 id="palette">palette</h2>
 
 <p>strawberry consists of 8 theme-distinct <strong>base colours</strong>, which are used for most interface elements, and 8 standard <strong>accent colours</strong> (common to the “nightsense theme family”) used for syntax highlighting.</p>
